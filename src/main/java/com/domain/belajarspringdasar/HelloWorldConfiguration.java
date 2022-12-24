@@ -13,7 +13,8 @@ Spring dapat dibilang framework IoC, Application Context merupakan container dar
 
 sehingga kode seperti main class dll diserahkan kepada spring, sehingga programmer memiliki cara kerja yang sama
 
-saat ingin membuat application context yang pertama harus dibuat yaitu configuration dengan annotation @Configuration pada awal class
+saat ingin membuat application context yang pertama harus dibuat yaitu configuration dengan annotation @Configuration 
+pada awal class
 Lanjut ke ApplicationContextTest.java
 */
 
