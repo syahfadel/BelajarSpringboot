@@ -10,3 +10,4 @@
     5. Duplicate Bean DuplicateBeanConfiguration.java, DuplicateBeanTest.java
     6. Primary Bean PrimaryBeanConfiguration. java, PrimaryBeanTest.java
     7. Change Bean name ChangeBeanNameConfiguration.java, ChangeBeaNameTest.java
+    8. Depedency Injection (DI) DepedencyInjectionConfiguration.java, DepedencyInjectionTest.java
