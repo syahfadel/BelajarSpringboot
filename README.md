@@ -11,3 +11,4 @@
     6. Primary Bean PrimaryBeanConfiguration. java, PrimaryBeanTest.java
     7. Change Bean name ChangeBeanNameConfiguration.java, ChangeBeaNameTest.java
     8. Depedency Injection (DI) DepedencyInjectionConfiguration.java, DepedencyInjectionTest.java
+    9. Memilih depedency DepedencyInjectionConfiguration.java line 45 dst, DepedencyInjectionTest.java line 36, 39, 44, 45

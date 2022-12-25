@@ -33,10 +33,15 @@ public class DepedencyInjectionTest {
     @Test
     void testDI() {
         Foo foo = applicationContext.getBean(Foo.class);
+        Foo fooSecond = applicationContext.getBean("fooSecond", Foo.class);
         Bar bar = applicationContext.getBean(Bar.class);
         FooBar fooBar = applicationContext.getBean(FooBar.class);
+        FooBar fooBar2 = applicationContext.getBean("fooBar2", FooBar.class);
 
         Assertions.assertSame(foo, fooBar.getFoo());
+        Assertions.assertSame(bar, fooBar.getBar());
+
+        Assertions.assertSame(fooSecond, fooBar2.getFoo());
         Assertions.assertSame(bar, fooBar.getBar());
     }
 }
