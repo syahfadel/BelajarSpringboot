@@ -14,3 +14,4 @@
     9. Memilih depedency DepedencyInjectionConfiguration.java line 45 dst, DepedencyInjectionTest.java line 36, 39, 44, 45
     10. Circular Depedencies CyclcConfiguration.java, CyclicTest.java
     11. DependsOn DependsOnConfiguration.java, DependsOnTest.java
+    12. Lazy bean DependsOnConfiguration.java line 27 -33, DependsOnTest.java line 24-25
