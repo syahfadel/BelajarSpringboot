@@ -1,10 +1,13 @@
 package com.domain.belajarspringdasar;
 
+import org.springframework.beans.factory.config.CustomScopeConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
+import com.domain.belajarspringdasar.data.Bar;
 import com.domain.belajarspringdasar.data.Foo;
+import com.domain.belajarspringdasar.scope.DoubletonScope;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,5 +34,23 @@ public class ScopeConfiguration {
     public Foo foo() {
         log.info("Create new Foo");
         return new Foo();
+    }
+
+    /*
+     * Setelah scope dibuat bata DoubletonScope.java, selanjutnya mendaftarkan scope
+     * di CustomScopeConfigurer
+     */
+    @Bean
+    public CustomScopeConfigurer customScopeConfigurer() {
+        CustomScopeConfigurer configurer = new CustomScopeConfigurer();
+        configurer.addScope("doubleton", new DoubletonScope());
+        return configurer;
+    }
+
+    @Bean
+    @Scope("doubleton")
+    public Bar bar() {
+        log.info("Return new bar");
+        return new Bar();
     }
 }
