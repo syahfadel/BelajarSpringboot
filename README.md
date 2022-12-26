@@ -17,3 +17,4 @@
     12. Lazy bean DependsOnConfiguration.java line 27 -33, DependsOnTest.java line 24-25
     13. Scope ScopeConfiguration.java, ScopeTest.java
     14. Membuat Scope DoubletonScope.java, ScopeConfiguration.java line 39 dst, ScopeTest.java line 31 dst
+    15. Life Cycle Connection.java, LifeCycleConfiguration.java, LifeCycleTest.java
