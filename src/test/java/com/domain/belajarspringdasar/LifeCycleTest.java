@@ -8,6 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.domain.belajarspringdasar.data.Connection;
+import com.domain.belajarspringdasar.data.Server;
 
 public class LifeCycleTest {
 
@@ -27,5 +28,10 @@ public class LifeCycleTest {
     @Test
     void testConnection() {
         applicationContext.getBean(Connection.class);
+    }
+
+    @Test
+    void testServer() {
+        applicationContext.getBean(Server.class);
     }
 }

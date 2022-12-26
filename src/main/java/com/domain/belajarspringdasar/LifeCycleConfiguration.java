@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.domain.belajarspringdasar.data.Connection;
+import com.domain.belajarspringdasar.data.Server;
 
 @Configuration
 public class LifeCycleConfiguration {
@@ -30,5 +31,26 @@ public class LifeCycleConfiguration {
     @Bean
     public Connection connection() {
         return new Connection();
+    }
+
+    /*
+     * ==============================Life Cycle Annotation=========================
+     * selain menggunakan interface intitalizingBean dan DisposableBean kita juga
+     * dapat menggunakan annotaion untuk mendaftarkan callback method untuk
+     * lifecycle. Pada @Bean terdapat initMethod dan destroy mathod.
+     * initMethod untuk meregistrasikan method mana yang akan dipanggil saat bean
+     * selesai dibuat.
+     * destroyMethod untuk method yang akan dipanggil saat bean aka dihancurkan.
+     * method init dan destroy harus tanpa parameter dan tidak ada return. cocok
+     * untuk bean pada class yang tidak dapat kita control atau rubah.
+     * 
+     * Terkadang kita lupa menambahkan init dan destroy di @bean, ada alternatif
+     * lain yaitu menggunakan annotation @PostContruct dan @PreDestroy pada method
+     * secara langsung (Server.java) jadi hanya dapat dilakaukan pada class yang
+     * dapat kita kontrol atau ubah.
+     */
+    @Bean(initMethod = "start", destroyMethod = "stop")
+    public Server server() {
+        return new Server();
     }
 }
