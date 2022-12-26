@@ -19,3 +19,4 @@
     14. Membuat Scope DoubletonScope.java, ScopeConfiguration.java line 39 dst, ScopeTest.java line 31 dst
     15. Life Cycle Connection.java, LifeCycleConfiguration.java, LifeCycleTest.java
     16. Life Cycle Annototation Server.java, LifeCycleConfiguration.java line 36 dst, LifeCycleTest.java line 33 dst
+    17. Import MainConfiguration,java, FooConfiguration.java, BarConfiguration.java, ImportTest.java
