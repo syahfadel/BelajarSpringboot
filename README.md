@@ -20,4 +20,5 @@
     15. Life Cycle Connection.java, LifeCycleConfiguration.java, LifeCycleTest.java
     16. Life Cycle Annototation Server.java, LifeCycleConfiguration.java line 36 dst, LifeCycleTest.java line 33 dst
     17. Import MainConfiguration,java, FooConfiguration.java, BarConfiguration.java, ImportTest.java
-    18. Component Scan repo Configuration, ScanConfiguration.java, ScanTest.java
+    18. ComponentScan repo configuration, ScanConfiguration.java, ScanTest.java
+    19. Component repo service, ProductService.java, ComponentConfiguration.java, ComponentTest.java
