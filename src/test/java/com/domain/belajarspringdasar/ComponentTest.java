@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.domain.belajarspringdasar.repository.ProductRepository;
 import com.domain.belajarspringdasar.service.ProductService;
 
 public class ComponentTest {
@@ -18,10 +19,18 @@ public class ComponentTest {
     }
 
     @Test
-    void test() {
+    void testService() {
         ProductService productService1 = applicationContext.getBean(ProductService.class);
         // namabean menjadi camelCase dari nama class
         ProductService productService2 = applicationContext.getBean("productService", ProductService.class);
         Assertions.assertSame(productService1, productService2);
+    }
+
+    @Test
+    void testConstructorDepedencyInjection() {
+        ProductService productService = applicationContext.getBean(ProductService.class);
+        ProductRepository productRepository = applicationContext.getBean(ProductRepository.class);
+
+        Assertions.assertSame(productService.getProductRepository(), productRepository);
     }
 }

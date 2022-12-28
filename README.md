@@ -22,3 +22,4 @@
     17. Import MainConfiguration,java, FooConfiguration.java, BarConfiguration.java, ImportTest.java
     18. ComponentScan repo configuration, ScanConfiguration.java, ScanTest.java
     19. Component repo service, ProductService.java, ComponentConfiguration.java, ComponentTest.java
+    20. Constructor-Based Depedency Injection repo service, ProductService.java line 15-38, repo repository, ProductRepository.java, ComponentConfiguration.java line 8, ComponentTest.java line 29-35
