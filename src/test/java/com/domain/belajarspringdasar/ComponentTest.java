@@ -7,8 +7,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.domain.belajarspringdasar.repository.CategoryRepository;
+import com.domain.belajarspringdasar.repository.CustomerRepository;
 import com.domain.belajarspringdasar.repository.ProductRepository;
 import com.domain.belajarspringdasar.service.CategoryService;
+import com.domain.belajarspringdasar.service.CustomerService;
 import com.domain.belajarspringdasar.service.ProductService;
 
 public class ComponentTest {
@@ -42,5 +44,13 @@ public class ComponentTest {
         CategoryRepository categoryRepository = applicationContext.getBean(CategoryRepository.class);
 
         Assertions.assertSame(categoryService.getCategoryRepository(), categoryRepository);
+    }
+
+    @Test
+    void testFieldDepedencyInjection() {
+        CustomerService customerService = applicationContext.getBean(CustomerService.class);
+        CustomerRepository customerRepository = applicationContext.getBean(CustomerRepository.class);
+
+        Assertions.assertSame(customerService.getCustomerRepository(), customerRepository);
     }
 }
