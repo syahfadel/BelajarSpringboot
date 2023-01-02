@@ -25,3 +25,4 @@
     20. Constructor-Based Depedency Injection repo service, ProductService.java line 15-38, repo repository, ProductRepository.java, ComponentConfiguration.java line 8, ComponentTest.java line 29-35
     21. Setter-based Depedency Injection repo service, CategoryService.java , repo repository, CategoryRepository.java, ComponentConfiguration.java, ComponentTest.java line 40-46
     22. Field-based Depedency Injection repo service, CustomerService.java , repo repository, CustomerRepository.java, ComponentConfiguration.java, ComponentTest.java line 49-55
+    23. Qualifier repo configuration, CustomerConfiguration.java, CustomerRepository.java line 5 dihapus, CustomerService.java line 22-35, ComponentTest.java line 58-63
