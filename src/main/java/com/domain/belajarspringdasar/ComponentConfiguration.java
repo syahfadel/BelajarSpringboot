@@ -2,6 +2,9 @@ package com.domain.belajarspringdasar;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+
+import com.domain.belajarspringdasar.data.MultiFoo;
 
 @Configuration
 @ComponentScan(basePackages = {
@@ -10,6 +13,7 @@ import org.springframework.context.annotation.Configuration;
       "com.domain.belajarspringdasar.configuration"
 }) // otomatis saat spring menemukan @Configuration(dibaca sebagai configuration
    // baru) atau @Component (dibaca sebagai bean baru) akan otomatis baca
+@Import(MultiFoo.class)
 public class ComponentConfiguration {
    /*
     * Spring menyediakan cara otomatis sehingga tidak perlu membuat method
