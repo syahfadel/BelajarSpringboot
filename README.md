@@ -26,3 +26,4 @@
     21. Setter-based Depedency Injection repo service, CategoryService.java , repo repository, CategoryRepository.java, ComponentConfiguration.java, ComponentTest.java line 40-46
     22. Field-based Depedency Injection repo service, CustomerService.java , repo repository, CustomerRepository.java, ComponentConfiguration.java, ComponentTest.java line 49-55
     23. Qualifier repo configuration, CustomerConfiguration.java, CustomerRepository.java line 5 dihapus, CustomerService.java line 22-35, ComponentTest.java line 58-63
+    24. Optional Depedency OptionalConfiguration.java, OptionalTest.java, repo data, MultiFoo.java, ComponentConfiguration.java line 16, FooConfiguration.java line 16 dst
