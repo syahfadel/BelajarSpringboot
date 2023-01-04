@@ -32,3 +32,5 @@
     27. BeanFactory BeanFactoryTest.java
     28. Bean Post Processor IdAware.java, IdGeneratorBeanPostProcessor.java, Car.java, BeanPostProcessorTest.java
     29. Ordered IdAware.java line 7, IdGeneratorBeanPostProcessor.java implements Ordered line 18-27 , PrefixIdGeneratorBeanPostProcessor.java ,OrderedTest.java
+    30. Aware AuthService.java, AwareTest.java
+    31. BeanDefinitionRegistryPostProcessor FooBeanFactoryPostProcessor.java, BeanFactoryPostProcessorTest.java
