@@ -16,9 +16,6 @@ import lombok.extern.slf4j.Slf4j;
 public class PrefixIdGeneratorBeanPostProcessor implements BeanPostProcessor, Ordered {
 
     // materi ordered
-    /*
-     * k
-     */
     @Override
     public int getOrder() {
         return 2;
