@@ -13,20 +13,15 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Component
-public class IdGeneratorBeanPostProcessor implements BeanPostProcessor, Ordered {
+public class PrefixIdGeneratorBeanPostProcessor implements BeanPostProcessor, Ordered {
 
     // materi ordered
     /*
-     * kita bisa membuat lebih dari satu BeanPostProcessor tidak ada batas. tapi
-     * terkadang ada kasus kita ingin membuat beanpostprocessor secara berurutan.
-     * namun, spring tidak menjamin urutan eksekusinya. supaya kita bisa
-     * mengurutkannya kita harus menggunakan interface dengan nama ordered dari
-     * angka yang paling kecil ke paling besar. Angka ini merupakan angka yang di
-     * return pada getOrder()
+     * k
      */
     @Override
     public int getOrder() {
-        return 1;
+        return 2;
     }
 
     // materi Bean Post Processor
@@ -48,11 +43,11 @@ public class IdGeneratorBeanPostProcessor implements BeanPostProcessor, Ordered 
     // akan dilakukan pada semua bean
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        log.info("Id Generator Processor for bean {}", beanName);
+        log.info("Prefix Id Generator Processor for bean {}", beanName);
         if (bean instanceof IdAware) { // mengecek apakah bean merupakan turunan dari IdAware
-            log.info("set Id Generator for Bean {}", beanName);
+            log.info("Prefix set Id Generator for Bean {}", beanName);
             IdAware idAware = (IdAware) bean;
-            idAware.setId(UUID.randomUUID().toString());
+            idAware.setId("PZN-" + idAware.getId());
         }
 
         return bean;
