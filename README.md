@@ -30,3 +30,4 @@
     25. Factory Bean PaymentGatewayClient.java, PaymentGatewayClientFactoryBean.java, FactoryConfiguration.java, FactoryTest.java
     26. Inheritance MerchantService.java, MerchantServiceImpl.java, InheritanceConfiguration.java, InheritanceTest.java
     27. BeanFactory BeanFactoryTest.java
+    28. Bean Post Processor IdAware.java, IdGeneratorBeanPostProcessor.java, Car.java, BeanPostProcessorTest.java
