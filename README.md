@@ -38,3 +38,4 @@
     33. Event Listener Annotation UserListener.java, EventListenerTest.java
     34. SpringBootApplication FooApplication.java, FooApplicationTest.java
     35. StartUp Failure FooApplication.java, FooApplicationTest.java, WithoutSpringBootTest.java
+    36. Costumizing Spring Application FooApplication.java line 46-61

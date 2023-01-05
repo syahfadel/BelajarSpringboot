@@ -1,5 +1,6 @@
 package com.domain.belajarspringdasar.application;
 
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -34,10 +35,27 @@ public class FooApplication {
         return new Foo();
     }
 
-    public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(FooApplication.class, args);
+    // public static void main(String[] args) {
+    // ConfigurableApplicationContext applicationContext =
+    // SpringApplication.run(FooApplication.class, args);
 
-        Foo foo = applicationContext.getBean(Foo.class);
-        System.out.println(foo);
+    // Foo foo = applicationContext.getBean(Foo.class);
+    // System.out.println(foo);
+    // }
+
+    /*
+     * MATERI CUSTOMIZING SPRING APPLICATION
+     * terkadang ada kala kita ingin mengatur spring application yang kita buat
+     * sebelum application context dibuat. Kita tidak perlu menggunakan
+     * SpringApplication.run() namun dapat juga menggunakan new SpringApplication.
+     * Kita tidak harus menggunakan SpringApplication, bisa juga menggunakan bantuan
+     * lainnya seperti SpringApplicationBuilder
+     */
+    public static void main(String[] args) {
+        SpringApplication application = new SpringApplication(FooApplication.class);
+        application.setBannerMode(Banner.Mode.OFF);
+        ConfigurableApplicationContext applicationContext = application.run(args);
+
+        applicationContext.getBean(Foo.class);
     }
 }
