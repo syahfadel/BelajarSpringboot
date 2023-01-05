@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Import;
 
 import com.domain.belajarspringdasar.listener.LoginAgainSuccessListener;
 import com.domain.belajarspringdasar.listener.LoginSuccessListener;
+import com.domain.belajarspringdasar.listener.UserListener;
 import com.domain.belajarspringdasar.service.UserService;
 
 public class EventListenerTest {
@@ -16,7 +17,8 @@ public class EventListenerTest {
     @Configuration
     @Import({ UserService.class,
             LoginSuccessListener.class,
-            LoginAgainSuccessListener.class })
+            LoginAgainSuccessListener.class,
+            UserListener.class })
     public static class TestConfiguration {
 
     }
