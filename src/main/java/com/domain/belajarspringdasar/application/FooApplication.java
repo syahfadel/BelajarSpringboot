@@ -54,12 +54,12 @@ public class FooApplication {
      * Kita tidak harus menggunakan SpringApplication, bisa juga menggunakan bantuan
      * lainnya seperti SpringApplicationBuilder
      */
-    public static void main(String[] args) {
-        SpringApplication application = new SpringApplication(FooApplication.class);
-        application.setBannerMode(Banner.Mode.OFF);
-        application.setListeners(List.of(new AppStartingListener()));
-        ConfigurableApplicationContext applicationContext = application.run(args);
+    // public static void main(String[] args) {
+    // SpringApplication application = new SpringApplication(FooApplication.class);
+    // application.setBannerMode(Banner.Mode.OFF);
+    // application.setListeners(List.of(new AppStartingListener()));
+    // ConfigurableApplicationContext applicationContext = application.run(args);
 
-        applicationContext.getBean(Foo.class);
-    }
+    // applicationContext.getBean(Foo.class);
+    // }
 }

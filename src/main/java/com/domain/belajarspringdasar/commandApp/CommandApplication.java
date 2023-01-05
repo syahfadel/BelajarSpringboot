@@ -13,7 +13,8 @@ public class CommandApplication {
      * usahakan @SpringBootApplication berada pada package yang sama dengan
      * Component yang ingin digunakan
      */
-    public static void main(String[] args) {
-        ConfigurableApplicationContext application = SpringApplication.run(CommandApplication.class, args);
-    }
+    // public static void main(String[] args) {
+    // ConfigurableApplicationContext application =
+    // SpringApplication.run(CommandApplication.class, args);
+    // }
 }
