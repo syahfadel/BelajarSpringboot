@@ -1,5 +1,7 @@
 package com.domain.belajarspringdasar.application;
 
+import java.util.List;
+
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 
 import com.domain.belajarspringdasar.data.Bar;
 import com.domain.belajarspringdasar.data.Foo;
+import com.domain.belajarspringdasar.listener.AppStartingListener;
 
 @SpringBootApplication
 public class FooApplication {
@@ -54,6 +57,7 @@ public class FooApplication {
     public static void main(String[] args) {
         SpringApplication application = new SpringApplication(FooApplication.class);
         application.setBannerMode(Banner.Mode.OFF);
+        application.setListeners(List.of(new AppStartingListener()));
         ConfigurableApplicationContext applicationContext = application.run(args);
 
         applicationContext.getBean(Foo.class);

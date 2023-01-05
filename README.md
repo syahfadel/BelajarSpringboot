@@ -39,3 +39,4 @@
     34. SpringBootApplication FooApplication.java, FooApplicationTest.java
     35. StartUp Failure FooApplication.java, FooApplicationTest.java, WithoutSpringBootTest.java
     36. Costumizing Spring Application FooApplication.java line 46-61
+    37. Spring Application Event AppStringListener.java, FooApplication.java line 60
