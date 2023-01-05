@@ -36,3 +36,5 @@
     31. BeanDefinitionRegistryPostProcessor FooBeanFactoryPostProcessor.java, BeanFactoryPostProcessorTest.java
     32. Event Listener LoginSuccesEvent.java, User.java, LoginSuccessListener.java, LoginAgainSuccessListener.java, UserService.java, EventListenerTest.java
     33. Event Listener Annotation UserListener.java, EventListenerTest.java
+    34. SpringBootApplication FooApplication.java, FooApplicationTest.java
+    35. StartUp Failure FooApplication.java, FooApplicationTest.java, WithoutSpringBootTest.java

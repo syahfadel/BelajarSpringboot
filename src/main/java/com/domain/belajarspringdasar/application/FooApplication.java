@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
+import com.domain.belajarspringdasar.data.Bar;
 import com.domain.belajarspringdasar.data.Foo;
 
 @SpringBootApplication
@@ -23,8 +24,13 @@ public class FooApplication {
      * dibutuhkan secara otomatis
      */
 
+    /*
+     * pada SpringBootApplication terdapat failure Analyzer(StartUpFailure) yang
+     * memberitahu jika ada kesalahan dan mendeskripsikan serta memberitahukan aksi
+     * yang harus dilakukan. dapat dilihat pada terminal atau debug
+     */
     @Bean
-    public Foo foo() {
+    public Foo foo() { // tambah kan Bar bar pada parameter untuk materi StartUpFailure
         return new Foo();
     }
 
