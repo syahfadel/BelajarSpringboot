@@ -35,3 +35,4 @@
     30. Aware AuthService.java, AwareTest.java
     31. BeanDefinitionRegistryPostProcessor FooBeanFactoryPostProcessor.java, BeanFactoryPostProcessorTest.java
     32. Event Listener LoginSuccesEvent.java, User.java, LoginSuccessListener.java, LoginAgainSuccessListener.java, UserService.java, EventListenerTest.java
+    33. Event Listener Annotation UserListener.java, EventListenerTest.java
